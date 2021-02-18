@@ -1,0 +1,32 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "name": "Lasagne po bolońsku",
+      "ingredients": [
+        "mięso mielone",
+        "1 marchewka",
+        "2 łodyki selera naciowego",
+        "1 cebula"
+      ],
+      "instructions": "Cebulkę pokroić w kostkę. Zeszklić na patelni. Marchewkę zetrzeć na tarce. Seler naciowy pokroić w kosteczkę. Marchewkę i seler dodać do cebulki i podsmarzać aż będą miękkie"
+    },
+    {
+      "id": 2,
+      "name": "Kurczak w sosie curry",
+      "ingredients": ["pierś z kurczaka", "imbir", "pasta curry", "1 cebula"],
+      "instructions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+    },
+    {
+      "id": 3,
+      "name": "Kotlety mielone z indyka",
+      "ingredients": [
+        "mięso mielone",
+        "1 bułka (najlepiej czerstwa)",
+        "woda/mleko do namoczenia bułki",
+        "1 cebula"
+      ],
+      "instructions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+    }
+  ]
+}
