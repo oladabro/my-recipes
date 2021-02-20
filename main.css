@@ -59,3 +59,22 @@ textarea {
 .recipe a {
   color: #36cca2;
 }
+
+.recipe ul {
+  margin-top: 20px;
+}
+
+.recipe li {
+  margin-left: 30px;
+  list-style-position: inside;
+}
+
+.recipe img {
+  float: left;
+  width: 30%;
+  margin: 20px 30px;
+}
+.recipe .main-site {
+  color: #36cca2;
+  background-color: white;
+}

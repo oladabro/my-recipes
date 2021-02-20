@@ -3,6 +3,8 @@
     {
       "id": 1,
       "name": "Lasagne po bolońsku",
+      "image": "https://www.mojegotowanie.pl/media/cache/default_view/uploads/media/default/0001/74/2942f9741b8b7d2a4941903cfcd0be00be229028.jpeg",
+      "imageName": "lasagne",
       "ingredients": [
         "mięso mielone",
         "1 marchewka",
@@ -14,12 +16,16 @@
     {
       "id": 2,
       "name": "Kurczak w sosie curry",
+      "image": "https://cdn.aniagotuje.com/pictures/articles/2020/01/1967553-v-1080x1080.jpg",
+      "imageName": "Kurczak curry",
       "ingredients": ["pierś z kurczaka", "imbir", "pasta curry", "1 cebula"],
       "instructions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
     },
     {
       "id": 3,
       "name": "Kotlety mielone z indyka",
+      "image": "https://cdn.aniagotuje.com/pictures/articles/2016/01/1958-v-900x556.jpg",
+      "imageName": "Kotlety z indyka",
       "ingredients": [
         "mięso mielone",
         "1 bułka (najlepiej czerstwa)",

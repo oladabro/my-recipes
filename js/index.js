@@ -6,19 +6,27 @@ const renderRecipes = async () => {
   const res = await fetch(uri);
   const recipes = await res.json();
 
-  let template = '';
-
-  recipes.forEach((recipe) => {
-    template += `
-    <div class='recipe'>
-      <h2>${recipe.name}</h2>
-      <p>${recipe.instructions.slice(0, 200)}</p>
-      <a href="/details.html?id=${recipe.id}">read more...</a>
-    </div>
-    `;
-  });
-
-  container.innerHTML = template;
+  return recipes;
 };
+
+let template = '';
+
+renderRecipes()
+  .then((recipes) => {
+    recipes.forEach((recipe) => {
+      template += `
+      <div class='recipe'>
+        <h2>${recipe.name}</h2>
+        <p>${recipe.instructions.slice(0, 200)}</p>
+        <a href="/details.html?id=${recipe.id}">read more...</a>
+      </div>
+      `;
+    });
+    container.innerHTML = template;
+  })
+  .catch((err) => {
+    template = `<div class="recipe">Failed to fetch data</div>`;
+    container.innerHTML = template;
+  });
 
 window.addEventListener('DOMContentLoaded', () => renderRecipes());
