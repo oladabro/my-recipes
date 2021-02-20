@@ -1,7 +1,9 @@
 const container = document.querySelector('.recipes');
 
 const renderRecipes = async () => {
-  let uri = 'http://localhost:3000/recipes';
+  let uri = 'http://localhost:3000/recipes?_sort=likes&_order=desc';
+
+  // default order is to go from lowest to highest
 
   const res = await fetch(uri);
   const recipes = await res.json();
@@ -17,7 +19,8 @@ renderRecipes()
       template += `
       <div class='recipe'>
         <h2>${recipe.name}</h2>
-        <p>${recipe.instructions.slice(0, 200)}</p>
+        <p><small>${recipe.likes} likes</small></p>
+        <p>${recipe.instructions.slice(0, 200)} </p>
         <a href="/details.html?id=${recipe.id}">read more...</a>
       </div>
       `;
