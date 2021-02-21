@@ -14,6 +14,24 @@
     <nav>
       <h1>Add a new recipe</h1>
     </nav>
+    <div>
+      <form>
+        <input name="name" placeholder="Nazwa potrawy" required />
+        <textarea
+          name="ingredients"
+          placeholder="Składniki (wpisz po przecinku)"
+          wrap="soft"
+          required
+        ></textarea>
+        <textarea
+          name="instructions"
+          placeholder="Instrukcje krok po kroku"
+          required
+        ></textarea>
+        <button class="create-recipe-btn">Create</button>
+      </form>
+    </div>
+
     <script src="./js/create.js" />
   </body>
 </html>

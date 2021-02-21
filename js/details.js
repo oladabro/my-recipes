@@ -19,12 +19,13 @@ const renderDetails = async () => {
   const template = `
   <div class='recipe'>
     <h2>${details.name}</h2>
-    
-    <img src=${details.image} alt=${details.imageName}>
+ 
+        <img src=${details.image} alt="" title=${details.imageName}>
+
     <p>Składniki:</p>
     <ul>${renderIngredients()}</ul>
     <p>${details.instructions}</p>
-    <a href="/" class='main-site'>Strona główna...</a>
+    <a href="/" class='main-site-btn'>Strona główna...</a>
   </div>
   
   `;
