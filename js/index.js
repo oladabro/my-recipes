@@ -21,7 +21,7 @@ renderRecipes()
         <h2>${recipe.name}</h2>
         <p><small>${recipe.likes} likes</small></p>
         <p>${recipe.instructions.slice(0, 200)} </p>
-        <a href="/details.html?id=${recipe.id}">read more...</a>
+        <a href="/details.html?id=${recipe.id}">więcej...</a>
       </div>
       `;
     });
