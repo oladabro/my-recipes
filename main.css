@@ -98,3 +98,6 @@ textarea {
 img[src^='alt'] {
   display: none;
 }
+.delete-recipe-btn {
+  padding: 10px 20px;
+}
