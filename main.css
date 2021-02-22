@@ -107,6 +107,13 @@ img[src^='alt'] {
   justify-content: space-between;
 }
 
-.far {
+.far,
+.fas {
   cursor: pointer;
+  margin-left: 5px;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
 }

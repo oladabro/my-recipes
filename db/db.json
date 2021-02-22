@@ -12,7 +12,7 @@
         "1 cebula"
       ],
       "instructions": "Cebulkę pokroić w kostkę. Zeszklić na patelni. Marchewkę zetrzeć na tarce. Seler naciowy pokroić w kosteczkę. Marchewkę i seler dodać do cebulki i podsmarzać aż będą miękkie",
-      "likes": 50
+      "likes": 62
     },
     {
       "id": 2,
@@ -26,7 +26,7 @@
         "1 cebula"
       ],
       "instructions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
-      "likes": 25
+      "likes": 26
     },
     {
       "id": 3,
@@ -40,7 +40,7 @@
         "1 cebula"
       ],
       "instructions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
-      "likes": 35
+      "likes": 36
     },
     {
       "name": "Racuchy z jabłkami",
@@ -52,7 +52,7 @@
         " szklanka mleka"
       ],
       "instructions": "Wymieszaj wszystkie składniki. Jabłka pokrój w plasterki i wymieszaj z masą. Smażyć najlepiej na maśle klarowanym na dobrze rozgrzanej patelni.",
-      "likes": 0,
+      "likes": 2,
       "id": 4
     }
   ]

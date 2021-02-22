@@ -1,15 +1,24 @@
+// find objects
+
 const id = new URLSearchParams(window.location.search).get('id'); //1
 const nav = document.querySelector('nav');
 const deleteBtn = document.querySelector('.delete-recipe-btn');
 const likesBtn = document.querySelector('.far');
-console.log(likesBtn);
+const likes = document.querySelector('.likes');
 
-console.log(window.location.search); //?id=1
+// console.log(window.location.search); //?id=1
+
+// run render recipe details when DOM is loaded
+
+window.addEventListener('DOMContentLoaded', () => renderDetails());
+
+// render details of a recipe
+
+let details = '';
 
 const renderDetails = async () => {
   const response = await fetch(`http://localhost:3000/recipes/${id}`);
-  const details = await response.json();
-  console.log(details.ingredients);
+  details = await response.json();
 
   let array = '';
   const renderIngredients = () => {
@@ -18,26 +27,45 @@ const renderDetails = async () => {
     });
     return array;
   };
-
+  // create template that will be injected into HTML
   const template = `
   <div class='recipe'>
-  <div class ='likes-container'>
-    <h2>${details.name}</h2><small>${
-    details.likes
-  } <i class="far fa-thumbs-up"></i></small></div>
- 
+      <h2>${details.name}</h2>
         <img src=${details.image} alt="" title=${details.imageName}>
-
     <p>Składniki:</p>
     <ul>${renderIngredients()}</ul>
     <p>${details.instructions}</p>
     <a href="/" class='main-site-btn'>Strona główna...</a>
   </div>
-  
   `;
-
+  // inject details and number of likes
   nav.innerHTML = template;
+  likes.innerHTML = details.likes;
 };
+
+// function that increases number of likes by one
+
+likesBtn.addEventListener('click', addLike);
+
+const addLike = async () => {
+  const response = await fetch(`http://localhost:3000/recipes/${id}`, {
+    method: 'PATCH',
+    headers: { 'Content-Type': 'application/json; charset=UTF-8' },
+    body: JSON.stringify({
+      likes: details.likes + 1,
+    }),
+  });
+
+  details = await response.json();
+  likes.innerHTML = details.likes;
+  // change of thumbs up from far to fas
+  likesBtn.classList.add('fas');
+  likesBtn.removeEventListener('click', addLike);
+};
+
+// function that removes recipe from database
+
+deleteBtn.addEventListener('click', removeRecipe);
 
 const removeRecipe = async (e) => {
   await fetch(`http://localhost:3000/recipes/${id}`, {
@@ -45,12 +73,3 @@ const removeRecipe = async (e) => {
   });
   window.location.replace('/index.html');
 };
-
-const addLike = () => {
-  console.log('add like');
-};
-likesBtn.addEventListener('click', addLike);
-
-deleteBtn.addEventListener('click', removeRecipe);
-
-window.addEventListener('DOMContentLoaded', () => renderDetails());
