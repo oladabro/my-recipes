@@ -45,8 +45,6 @@ const renderDetails = async () => {
 
 // function that increases number of likes by one
 
-likesBtn.addEventListener('click', addLike);
-
 const addLike = async () => {
   const response = await fetch(`http://localhost:3000/recipes/${id}`, {
     method: 'PATCH',
@@ -63,9 +61,9 @@ const addLike = async () => {
   likesBtn.removeEventListener('click', addLike);
 };
 
-// function that removes recipe from database
+likesBtn.addEventListener('click', addLike);
 
-deleteBtn.addEventListener('click', removeRecipe);
+// function that removes recipe from database
 
 const removeRecipe = async (e) => {
   await fetch(`http://localhost:3000/recipes/${id}`, {
@@ -73,3 +71,4 @@ const removeRecipe = async (e) => {
   });
   window.location.replace('/index.html');
 };
+deleteBtn.addEventListener('click', removeRecipe);

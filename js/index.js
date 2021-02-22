@@ -1,20 +1,24 @@
 const container = document.querySelector('.recipes');
+const searchForm = document.querySelector('.search');
 
-const renderRecipes = async () => {
-  let uri = 'http://localhost:3000/recipes?_sort=likes&_order=desc';
+window.addEventListener('DOMContentLoaded', () => renderRecipes());
 
-  // default order is to go from lowest to highest
+const renderRecipes = async (term) => {
+  try {
+    let uri = 'http://localhost:3000/recipes?_sort=likes&_order=desc';
 
-  const res = await fetch(uri);
-  const recipes = await res.json();
+    if (term) {
+      console.log(term);
+      uri += `&q=${term}`;
+      console.log(uri);
+    }
+    // default order is to go from lowest to highest
 
-  return recipes;
-};
+    const res = await fetch(uri);
+    const recipes = await res.json();
 
-let template = '';
+    let template = '';
 
-renderRecipes()
-  .then((recipes) => {
     recipes.forEach((recipe) => {
       template += `
       <div class='recipe'>
@@ -26,10 +30,16 @@ renderRecipes()
       `;
     });
     container.innerHTML = template;
-  })
-  .catch((err) => {
+  } catch (err) {
     template = `<div class="recipe">Failed to fetch data</div>`;
     container.innerHTML = template;
-  });
+  }
+};
 
-window.addEventListener('DOMContentLoaded', () => renderRecipes());
+const searchTerm = (e) => {
+  e.preventDefault();
+
+  renderRecipes(searchForm.term.value.trim());
+};
+
+searchForm.addEventListener('submit', searchTerm);
