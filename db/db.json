@@ -41,6 +41,19 @@
       ],
       "instructions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
       "likes": 35
+    },
+    {
+      "name": "Racuchy z jabłkami",
+      "image": "",
+      "imageName": "Racuchy z jabłkami",
+      "ingredients": [
+        "2 jabłka",
+        " szklanka mąki",
+        " szklanka mleka"
+      ],
+      "instructions": "Wymieszaj wszystkie składniki. Jabłka pokrój w plasterki i wymieszaj z masą. Smażyć najlepiej na maśle klarowanym na dobrze rozgrzanej patelni.",
+      "likes": 0,
+      "id": 4
     }
   ]
 }

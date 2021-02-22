@@ -101,3 +101,12 @@ img[src^='alt'] {
 .delete-recipe-btn {
   padding: 10px 20px;
 }
+
+.likes-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.far {
+  cursor: pointer;
+}

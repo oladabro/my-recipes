@@ -1,6 +1,8 @@
 const id = new URLSearchParams(window.location.search).get('id'); //1
 const nav = document.querySelector('nav');
 const deleteBtn = document.querySelector('.delete-recipe-btn');
+const likesBtn = document.querySelector('.far');
+console.log(likesBtn);
 
 console.log(window.location.search); //?id=1
 
@@ -19,7 +21,10 @@ const renderDetails = async () => {
 
   const template = `
   <div class='recipe'>
-    <h2>${details.name}</h2>
+  <div class ='likes-container'>
+    <h2>${details.name}</h2><small>${
+    details.likes
+  } <i class="far fa-thumbs-up"></i></small></div>
  
         <img src=${details.image} alt="" title=${details.imageName}>
 
@@ -40,6 +45,12 @@ const removeRecipe = async (e) => {
   });
   window.location.replace('/index.html');
 };
+
+const addLike = () => {
+  console.log('add like');
+};
+likesBtn.addEventListener('click', addLike);
+
 deleteBtn.addEventListener('click', removeRecipe);
 
 window.addEventListener('DOMContentLoaded', () => renderDetails());
